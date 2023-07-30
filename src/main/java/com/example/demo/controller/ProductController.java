@@ -45,7 +45,7 @@ public class ProductController {
 		}
 		return null;
 	}
-	@PutMapping("/employee/{employeeId}")
+	@PutMapping("/product/{productId}")
 	public Product updateProduct(@PathVariable Integer productId,@RequestBody Product body) {
 		
 		for(int i = 0; i< data.size(); i++) {
@@ -63,7 +63,7 @@ public class ProductController {
 		return null;
 	}
 	@DeleteMapping("/product/{productId}")
-	public String deleteEmployee(@PathVariable Integer productId) {
+	public String deleteProduct(@PathVariable Integer productId) {
 		for(int i = 0; i< data.size(); i++) {
 			if(productId == data.get(i).getProductId() ) {
 				data.remove(i);
